@@ -225,7 +225,11 @@ function generateNewsImage() {
 
   // Footer stamp & Date verification
   canvas.fillRect(40, 950, 944, 40, 20, 24, 33);
-  canvas.drawString("DATE CHECKED: 19 NOV 2026  •  UTC VERIFIED  •  MAKE.FUN BOUNTY", 60, 963, 2, 255, 255, 255);
+  canvas.drawString("DATE CHECKED: 19 NOV 2026 23:59 UTC  •  VERIFIED  •  MAKE.FUN", 60, 963, 2, 255, 255, 255);
+
+  // Border Accent
+  canvas.drawRect(10, 10, 1004, 1004, 20, 24, 33, 5);
+  canvas.drawRect(25, 25, 974, 974, 180, 40, 40, 2);
 
   const pngBuffer = encodePNG(width, height, canvas.data);
   return pngBuffer;
